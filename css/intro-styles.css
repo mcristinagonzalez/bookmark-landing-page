@@ -1,0 +1,19 @@
+.intro{
+    background-color: beige;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.intro-button-firefox{
+    background-color: lightgrey;
+    color: black;
+    box-shadow: 0px 3px 3px rgba(0, 0, 255, 0.25);
+}

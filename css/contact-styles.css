@@ -1,0 +1,11 @@
+.contact{
+    padding: 2em;
+    background-color: #5266df; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-button{
+    background-color: #f45d5d;
+}

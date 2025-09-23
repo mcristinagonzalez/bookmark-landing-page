@@ -1,0 +1,19 @@
+.faq{
+    margin: 1em;
+    padding: 1em;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+details{
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    padding-bottom: 1em;
+}
+
+
+summary::marker {
+  color: #5266df;
+  font-size: 1.2em;
+}
