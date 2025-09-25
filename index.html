@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bookmark</title>
+    <link rel="icon" type="image/png" href="starter-code/images/favicon-32x32.png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/header-styles.css">
     <link rel="stylesheet" href="css/main-styles.css">
@@ -56,32 +57,32 @@
             </div>
         </section>
 
-
         <section class="features">
             <div class="description">
                 <h2>Features</h2>
                 <p>Our aim is to make it quick and easy for you to access your favourite websites. Your  bookmarks sync between your devices so you can access them on the go.</p>
             </div>
-            <div class="feature-tabs">
-                <button class="tablinks active" onclick="openFeature(event, 'simple')">Simple Bookmarking</button>
-                <button class="tablinks" onclick="openFeature(event, 'Speedy')">Speedy Searching</button>
-                <button class="tablinks" onclick="openFeature(event, 'Easy')">Easy Sharing</button>
-            </div>
-            <div>
-                <div class="feature-content">
-                    <figure class="illustration-with-blue">
-                        <img src="starter-code/images/illustration-hero.svg">
-                        <div class="blue-figure"></div>
-                    </figure>
-                    <div class="feature-description">
-                        <h3>Bookmark in one click</h3>
-                        <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-                    </div>
+
+            <div class="tab">
+                <button class="tablinks" onclick="openFeature(event, 'simple')" id="defaultOpen">Simple Bookmarking</button>
+                <button class="tablinks" onclick="openFeature(event, 'speedy')">Speedy Searching </button>
+                <button class="tablinks" onclick="openFeature(event, 'easy')">Easy Sharing</button>
                 </div>
 
-                <div class="feature-content">
-                    <figure class="illustration-with-blue">
-                        <img src="starter-code/images/illustration-hero.svg">
+            <div id="simple" class="tabcontent">
+                <figure class="illustration-with-blue">
+                        <img src="starter-code/images/illustration-features-tab-1.svg">
+                        <div class="blue-figure"></div>
+                </figure>
+                <div class="feature-description">
+                    <h3>Bookmark in one click</h3>
+                    <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+                </div>
+            </div>
+
+            <div id="speedy" class="tabcontent">
+                <figure class="illustration-with-blue">
+                        <img src="starter-code/images/illustration-features-tab-2.svg">
                         <div class="blue-figure"></div>
                     </figure>
                     <div class="feature-description">
@@ -89,11 +90,11 @@
                         <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
                     </div>
                     <button type="button">More info</button>
-                </div>
+            </div>
 
-                <div class="feature-content">
-                    <figure class="illustration-with-blue">
-                        <img src="starter-code/images/illustration-hero.svg">
+            <div id="easy" class="tabcontent">
+                <figure class="illustration-with-blue">
+                        <img src="starter-code/images/illustration-features-tab-3.svg">
                         <div class="blue-figure"></div>
                     </figure>
                     <div class="feature-description">
@@ -102,7 +103,8 @@
                     </div>
                     <button type="button">More info</button>
                 </div>
-            </div>  
+            </div>
+
         </section>
 
 
@@ -167,5 +169,6 @@
             <img class="logo-twitter" src="starter-code/images/icon-twitter.svg">
         </div>
     </footer>
+    <script src="js/feature.js"></script>
 </body>
 </html>

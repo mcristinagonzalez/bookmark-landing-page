@@ -12,8 +12,24 @@ details{
     padding-bottom: 1em;
 }
 
+summary{ 
+  padding: 1em;
+  list-style: none 
+}
 
-summary::marker {
-  color: #5266df;
-  font-size: 1.2em;
+summary::after {
+  content: ''; 
+  display: inline-block;
+  width: 1em; 
+  height: 1em;
+  background-image: url("../starter-code/images/icon-arrow.svg"); 
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  vertical-align: middle; 
+  transition: transform 0.2s ease-in-out; 
+}
+
+details[open] > summary::after {
+    transform: rotate(90deg);
 }

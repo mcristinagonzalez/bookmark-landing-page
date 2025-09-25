@@ -12,7 +12,7 @@ p{
 }
 
 button{
-    background-color: blue;
+    background-color: #5266df;
     border: none;
     padding: 1em 2em;
     cursor: pointer;
@@ -23,5 +23,8 @@ button{
     font-weight: bold;
 }
 
-
+img {
+  max-width: 90%;
+  height: auto;   
+}
 
