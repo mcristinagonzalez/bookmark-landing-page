@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="css/main-styles.css">
     <link rel="stylesheet" href="css/intro-styles.css">
     <link rel="stylesheet" href="css/features-styles.css">
+
+    <link rel="stylesheet" href="css/tabcontent-styles.css">
+
+
+    <link rel="stylesheet" href="css/download-styles.css">
     <link rel="stylesheet" href="css/faq-styles.css">
     <link rel="stylesheet" href="css/contact-styles.css">
     <link rel="stylesheet" href="css/footer-styles.css">
@@ -18,7 +23,7 @@
     <header>
         <nav class="nav-container">
             <figure class="nav-figure">
-                <h1><img src="starter-code/images/logo-bookmark.svg"></h1>
+                <img src="starter-code/images/logo-bookmark.svg">
             </figure>
             <label class="nav-toggle">
                 <input type="checkbox" id="menu-input" class="nav-input">
@@ -34,73 +39,82 @@
                     <a href="#" class="nav-link">Contact</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Login</a>
+                    <a href="#" class="nav-link login-button">Login</a>
                 </li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="intro">
+        <section class="section intro">
             <figure class="illustration-with-blue">
-                <img src="starter-code/images/illustration-hero.svg">
+               <img class= "hero-image" src="starter-code/images/illustration-hero.svg">
                 <div class="blue-figure"></div>
             </figure>
             
-            <div class="description">
-                <h2>A simple bookmark manager</h2>
-                <p>A clean and simple interface to organiza your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+            <div class="description-intro">
+                <h1>A simple bookmark manager</h1>
+                <p>A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
+                <div class="bookmark-button">
+                    <button class="intro-button-chrome" type="button">Get in on Chrome</button>
+                    <button class="intro-button-firefox" type="button">Get in on Firefox</button>
+                </div>
             </div>
-            <div class="bookmark-button">
-                <button class="intro-button-chrome" type="button">Get in on Chrome</button>
-                <button class="intro-button-firefox" type="button">Get in on Firefox</button>
-            </div>
+            
         </section>
 
-        <section class="features">
+        <section class="section feature">
             <div class="description">
                 <h2>Features</h2>
                 <p>Our aim is to make it quick and easy for you to access your favourite websites. Your  bookmarks sync between your devices so you can access them on the go.</p>
             </div>
 
-            <div class="tab">
-                <button class="tablinks" onclick="openFeature(event, 'simple')" id="defaultOpen">Simple Bookmarking</button>
-                <button class="tablinks" onclick="openFeature(event, 'speedy')">Speedy Searching </button>
-                <button class="tablinks" onclick="openFeature(event, 'easy')">Easy Sharing</button>
-                </div>
+            <nav class="nav-tab">
+                <ul class="nav-tab-list">
+                    <li class="nav-tab-item">
+                        <a class="tablinks" onclick="openFeature(event, 'simple')" id="defaultOpen">Simple Bookmarking</a>
+                    </li>
+                    <li class="nav-tab-item">
+                        <a class="tablinks" onclick="openFeature(event, 'speedy')">Speedy Searching</a>
+                    </li>
+                    <li class="nav-tab-item">
+                        <a class="tablinks" onclick="openFeature(event, 'easy')">Easy Sharing</a>
+                    </li>
+                </ul>   
+            </nav>
 
-            <div id="simple" class="tabcontent">
-                <figure class="illustration-with-blue">
-                        <img src="starter-code/images/illustration-features-tab-1.svg">
-                        <div class="blue-figure"></div>
+        </section>
+
+        <section class="tab-box">
+            <div id="simple" class="tabcontent simple">
+                <figure class="illustration">
+                        <img class="tab-image" src="starter-code/images/illustration-features-tab-1.svg">
+                        <div class="tab-blue-figure"></div>
                 </figure>
                 <div class="feature-description">
-                    <h3>Bookmark in one click</h3>
+                    <h2>Bookmark in one click</h2>
                     <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
                 </div>
             </div>
-
-            <div id="speedy" class="tabcontent">
-                <figure class="illustration-with-blue">
-                        <img src="starter-code/images/illustration-features-tab-2.svg">
-                        <div class="blue-figure"></div>
-                    </figure>
-                    <div class="feature-description">
-                        <h3>Intelligent search</h3>
-                        <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
-                    </div>
+            <div id="speedy" class="tabcontent speedy">
+                 <figure class="illustration">
+                   <img class="tab-image" src="starter-code/images/illustration-features-tab-2.svg">
+                    <div class="tab-blue-figure"></div>
+                </figure>
+                <div class="feature-description">
+                    <h2>Intelligent search</h2>
+                    <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.</p>
                     <button type="button">More info</button>
+                </div>       
             </div>
-
-            <div id="easy" class="tabcontent">
-                <figure class="illustration-with-blue">
-                        <img src="starter-code/images/illustration-features-tab-3.svg">
-                        <div class="blue-figure"></div>
-                    </figure>
-                    <div class="feature-description">
-                        <h3>Share your bookmarks</h3>
-                        <p>Easily share your bookmarks and collections with others. Create a shareable kink that you can send at the click of a button.</p>
-                    </div>
+            <div id="easy" class="tabcontent easy">
+                <figure class="illustration">
+                    <div class="tab-blue-figure"></div>    
+                    <img class="tab-image" src="starter-code/images/illustration-features-tab-3.svg">
+                </figure>
+                <div class="feature-description">
+                    <h2>Share your bookmarks</h2>
+                    <p>Easily share your bookmarks and collections with others. Create a shareable kink that you can send at the click of a button.</p>
                     <button type="button">More info</button>
                 </div>
             </div>
@@ -108,19 +122,39 @@
         </section>
 
 
-        <section class="download">
+        <section class="section download">
             <div class="description">
                 <h2>Download the extension</h2>
                 <p>We've got more browsers in the pipeline. Please do let us know if you've got a favourite you'd like us to prioritize.</p>
             </div>
-            <div class="add-chrome">Add to chrome</div>
-            <div class="add-firefox">Add to Firefox</div>
-            <div class="add-opera">Add to Opera</div>
+            <div class="box-install">
+                <div class="box-browser chrome">
+                    <img src="starter-code/images/logo-chrome.svg">
+                    <h3>Add to Chrome</h3>
+                    <p>Minimum version 62</p>
+                    <img src="starter-code/images/bg-dots.svg">
+                    <button type="button">Add & Install Extension</button>
+                </div>
+                <div class="box-browser firefox">
+                    <img src="starter-code/images/logo-firefox.svg">
+                    <h3>Add to Firefox</h3>
+                    <p>Minimum version 55</p>
+                    <img src="starter-code/images/bg-dots.svg">
+                    <button type="button">Add & Install Extension</button>    
+                </div>
+                <div class="box-browser opera">
+                    <img src="starter-code/images/logo-opera.svg">
+                    <h3>Add to Opera</h3>
+                    <p>Minimum version 46</p>
+                    <img src="starter-code/images/bg-dots.svg">
+                    <button type="button">Add & Install Extension</button>
+                </div>
+            </div>
         </section>
 
 
-        <section class="faq">
-            <div class="description">
+        <section class="section faq">
+            <div class="faq-title description">
                 <h2>Frequently Asked Questions</h2>
                 <p>Here are some of our FAQs. If you have any other questions you'd like answered please feel free to email us.</p>
             </div>
@@ -148,10 +182,12 @@
     </main>
 
     <section class="contact">
-            <h3>30,000+ already joined</p>
-            <h2>Stay up-to-date with what we're doing</h2>
-            <input type="text" placeholder="Enter your email address" id="email">
-            <button type="button" class="contact-button">Contact Us</button>
+            <h3 class="contact-h3">35,000+ already joined</p>
+            <h2 class="contact-h2">Stay up-to-date with what we're doing</h2>
+            <form class="contact-form">
+                <input class="contact-input" type="text" placeholder="Enter your email address" id="email">
+                <button type="button" class="contact-button">Contact Us</button>
+            </form>
     </section>
 
     <footer>

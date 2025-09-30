@@ -1,0 +1,42 @@
+.box-install{
+    padding: 3em;
+}
+
+.box-browser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+    border-radius: 1rem;
+    box-shadow: 0px 8px 5px 6px hsl(231 69% 60% /0.1);;
+    margin-bottom: 2em;
+}
+
+@media (min-width: 1050px){
+    .box-install{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-left: 13em;
+        padding-right: 13em;
+        
+    }
+
+    .box-browser{
+        padding-bottom: 0em;
+        width:85%;
+        gap: 0.5em;
+        height: 20em;
+    }
+
+   
+    .firefox{
+        margin-top: 3em;
+    }
+
+    .opera{
+        margin-top: 6em;
+
+    }
+
+}

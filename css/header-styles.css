@@ -1,14 +1,17 @@
 header{
-    background-color: lightblue;
+    padding-top: 2.2em;
+    padding-left: 2.2em;
+    padding-right: 4em;
+    padding-bottom: 1em;
 }
 
 .nav-container{
-    width: min(90%, 1200px);
+    width: min(90%, 75em);
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height:80px;
+    height: auto;
     --icon-toggle-menu: url("../starter-code/images/icon-hamburger.svg");
     --transform-menu-show: translate(-100%)
 }
@@ -18,13 +21,17 @@ header{
     --transform-menu-show: translate(0)
 }
 
+.nav-figure{
+    width: 12em;
+}
+
 .nav-figure, .nav-toggle{
     z-index: 10;
 }
 
 .nav-toggle{
-    width: 30px;
-    height: 30px;
+    width: 1.08em;
+    height: 1em;
     background-image: var(--icon-toggle-menu) ;
     background-size: cover;
     cursor: pointer;
@@ -68,4 +75,41 @@ header{
     color: white;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+@media (min-width: 1050px)  {
+
+    .nav-container{
+        --icon-toggle-menu: none;
+        --transform-menu-show: none;
+    }
+
+    .nav-list{
+        display: inline-flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        position: absolute;
+        height: 6em;
+        background-color: white;
+    }
+
+    .nav-item{
+        border: none;
+        padding: 1em;
+    }
+
+    .nav-item:last-child{
+        font-weight: bold;
+        background-color: #f45d5d;
+        border: none;
+    }
+
+    .nav-link{
+        color: black;
+    }
+
+    .login-button{
+        color:white;
+    }
+
 }

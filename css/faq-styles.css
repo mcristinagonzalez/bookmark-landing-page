@@ -1,19 +1,23 @@
 .faq{
-    margin: 1em;
-    padding: 1em;
-    background-color: beige;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+
+.faq-title{
+  margin:3em;
+  padding-bottom:1em;
+}
+
 details{
-    border-bottom: 1px solid rgba(0,0,0,0.5);
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    padding-top: 1em;
     padding-bottom: 1em;
 }
 
 summary{ 
-  padding: 1em;
+  padding-bottom: 1em;
   list-style: none 
 }
 
@@ -32,4 +36,8 @@ summary::after {
 
 details[open] > summary::after {
     transform: rotate(90deg);
+}
+
+@media (min-width: 1050px)  {
+  
 }
